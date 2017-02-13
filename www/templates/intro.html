@@ -1,0 +1,104 @@
+<ion-view id="intro" ng-class="{ 'slide-center': slideIndex == 1, 'slide-right': slideIndex == 2 }" hide-back-button="true" cache-view="false">
+  <ion-nav-bar>
+    <ion-nav-buttons side="left">
+      <button class="button button-positive button-clear"
+        ng-click="startApp()" ng-show="!slideIndex">
+        Skip
+      </button>
+      <button class="button button-positive button-clear"
+        ng-click="previous()" ng-show="slideIndex > 0">
+        Back
+      </button>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right"> 
+      <button class="button button-positive button-clear"
+        ng-click="next()" ng-show="slideIndex != 4">
+        Next
+      </button>
+      <button class="button button-positive button-clear"
+        ng-click="startApp()" ng-show="slideIndex == 4">
+        Explore
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content scroll="false">
+    <ion-slide-box  class="fullscreen-image" on-slide-changed="slideChanged(index)">
+      <ion-slide class="vertical-center-container">
+          <div class="vertical-center text-center">
+            <h4>Welcome to Capsules</h4>
+              <img class="full-image rounded-image" src="img/capsule.gif">
+            <p class="intro-text">
+              Explore nearby Capsules on a map.
+            </p>
+            <p class="intro-text">
+              View nearby Capsules in a list.
+            </p>
+            <p class="intro-text">
+              Powered by Capsules.
+            </p>
+          </div>
+      </ion-slide>
+
+      <ion-slide class="vertical-center-container">
+          <div class="vertical-center padding">
+            <div id="intro-info" class="text-center">
+              <h2>What is Capsules.io?</h2>
+              <h4>Capsules.io is a location-based social platform that provides its users the freedom to augment the world around them using virtual containers called capsules.  They can be dropped at any location and are accessible to anyone in proximity.</h4>
+	      <h4>Capsules are contains so you can move them, and pick them up.  They are highly customizable through extensions allowing you to configure their visibility and mobility among other things.</h4>
+              <h2>Share. Explore. Discover.</h2>
+	      <h4>Capsules are <b>social</b>. Create fun and personal location-based experiences for your family and friends.  Drop a capsule ...</h4>
+            </div>
+          </div>
+      </ion-slide>
+
+      <ion-slide class="vertical-center-container">
+          <div class="vertical-center padding">
+            <div id="intro-info" class="text-center">
+              <h2>Getting Started</h2>
+              <h3>Discovery Engine</h3>
+	      <h4>This is your portal to interact with capsules in the physical world. Capsules that are near you will be displayed on the map. Click on the capsule to bring focus and display details in the pager at the bottom.</h4>
+              <h3>Pick Up</h2>
+              <h4>Pick up a capsule by long clicking on a capsule on a the map.</h4>
+	      <h3>Drop</h3>
+              <h4>Click the capsule icon from the menu bar to extend a drawer to list all the capsules you are carrying ...</h4>
+            </div>
+          </div>
+      </ion-slide>
+
+
+      <ion-slide class="vertical-center-container">
+          <div class="vertical-center padding">
+            <div id="intro-info" class="text-center">
+              <h2>That's it!</h2>
+	      <h4>If you need to revisit any of this information it will be accessable from the About menu option.</h4>
+              <h4>Enjoy! - the Capsules Team</h4>
+            </div>
+          </div>
+      </ion-slide>
+
+      <ion-slide class="vertical-center-container">
+        <div class="vertical-center">
+          <h4 class="text-center">Developed by the Capsules Team</h4>
+          <div class="row">
+            <div class="col">
+              <img class="full-image rounded-image" src="img/logo.png">
+              <p class="intro-text text-center">Capsules app version 0.0.1</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <img class="full-image rounded-image" src="img/ionic.png">
+              <p class="intro-text text-center">Built with Ionic</p>
+            </div>
+          </div>
+          <h4 class="text-center">Powered by Capsules.</h4>
+
+          <div class="padding-center">
+            <a href="javascript:void(0)" ng-click="openWindow('https://capsules.io')" class="button button-light">The Capsules Website</a>
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slide-box>
+  </ion-content>
+</ion-view>
